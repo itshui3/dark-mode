@@ -23,7 +23,7 @@ const App = () => {
       .catch(err => console.log(err));
   }, []);
   return (
-    <div className="App">
+    <div className={`App ${darkMode ? 'dark-mode' : null}`}>
       <DarkModeContext.Provider value={{darkMode, setDarkMode}}>
         <Navbar />
         <Charts coinData={coinData} />
